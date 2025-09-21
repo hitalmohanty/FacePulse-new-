@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacePulse - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div id="animated-background" class="animated-background">
+        <div class="gradient-bg"></div>
+        <div class="particles-container"></div>
+        <div class="geometric-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg id="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+        <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+    </button>
+
+    <main id="main-container">
+        <section id="login-page" class="page active">
+           <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <img src="images/logo.png" alt="FacePulse Logo" class="logo" style="width:100px;height: 80px;">
+                        <h1 class="app-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            FacePulse
+                        </h1>
+                        <p class="app-subtitle">Face Recognition Attendance System</p>
+                    </div>
+                    
+                    <div class="role-selector">
+                        <button class="role-btn active" data-role="student">Student</button>
+                        <button class="role-btn" data-role="teacher">Teacher</button>
+                    </div>
+                    
+                    <form id="login-form" class="login-form">
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <div class="input-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <div class="input-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <circle cx="12" cy="16" r="1"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="login-btn" id="login-btn">
+                            <span id="btn-text">Sign In as Student</span>
+                            <div id="btn-loader" class="loader" style="display: none;"></div>
+                        </button>
+                    </form>
+                    
+                    <div class="demo-credentials">
+                        <p>Demo Credentials:</p>
+                        <p>Student: student / student123</p>
+                        <p>Teacher: teacher / teacher123</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
